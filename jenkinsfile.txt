@@ -1,0 +1,14 @@
+@Library('Jpl_sharedLibrary_test')_
+
+stage('JPL_test') {
+
+  echo 'Hi Guys Welcome Jenkins Shared Library!!!'
+
+  wishHello 'Nagendra'
+  
+  standardPipeline{
+      projectName = "Jpl_sharedLibrary_test"
+      
+  }
+
+}
