@@ -5,7 +5,7 @@ pipeline {
             steps {
                bat 'DATE /T'
 			   bat 'TIME /T'
-			   bat 'perl H:\CMRE\NP_Stuff\scripts\test.pl'
+			   bat 'call perl H:\CMRE\NP_Stuff\scripts\test.pl'
             }
         }
     }
