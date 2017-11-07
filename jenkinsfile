@@ -1,0 +1,14 @@
+pipeline {
+    agent any
+    stages {
+        stage('Build') {
+            steps {
+               bat 'DATE /T'
+			   bat 'TIME /T'
+            }
+        }
+		stage('Mail'){
+			echo 'Sending mail to below reciepents'
+		}
+    }
+}
