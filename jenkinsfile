@@ -1,14 +1,11 @@
 pipeline {
     agent any
     stages {
-        stage('Build') {
+        stage('Build CI Changes') {
             steps {
                bat 'DATE /T'
 			   bat 'TIME /T'
             }
         }
-		stage('Mail'){
-			echo 'Sending mail to below reciepents'
-		}
     }
 }
