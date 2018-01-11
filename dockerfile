@@ -6,4 +6,4 @@ COPY D:\ELS_CONFIGURE\ELS_SOFTWARE \Els_Software
 
 #Configuring the Docker image
 
-#bat 'D:\ELS_CONFIGURE\ELS_SOFTWARE\ELS_Setup.bat'
+CMD D:\ELS_CONFIGURE\ELS_SOFTWARE\ELS_Setup.bat && cmd
