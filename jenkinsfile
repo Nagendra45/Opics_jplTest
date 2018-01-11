@@ -1,10 +1,11 @@
 node {
-    def app
+    //def app
     stage('Clone repository') {
         checkout scm
     }
 
     stage('Build image') {
-        app = docker.build("testdocker/v1")
+      //  app = docker.build("testdocker/v1")
+	  bat 'docker build -t testimage:v1 .'
     }
 }
