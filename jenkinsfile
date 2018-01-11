@@ -1,14 +1,10 @@
-pipeline {
-    agent {
-        docker { 
-			image 'jenkins-windows:2.0'
+node(){
+	stage('Docker Build') {
+      agent any
+      steps {
+	  
+        bat 'docker build -t els_server/v1 .'
+		
 		}
-    }
-    stages {
-        stage('Test') {
-            steps {
-				echo 'Docker image version'
-            }
-        }
-    }
+	}
 }
