@@ -1,15 +1,15 @@
-@Library('Jpl_sharedLibrary_test')_
-
-stage('JPL_test') {
-
-  echo 'Hi Guys Welcome Jenkins Shared Library!!!'
-
-  wishHello 'Nagendra'
-  
-  //standardPipeline{
-    //  projectName = "Jpl_sharedLibrary_test"
-      
-  //}
-  evenorodd(currentBuild.getNumber())
-  
+pipeline {
+    agent {
+        docker { 
+			image 'jenkins-windows:2.0'
+		}
+    }
+    stages {
+        stage('Test') {
+            steps {
+				bat'jenkins --version'
+                bat'java --version'
+            }
+        }
+    }
 }
