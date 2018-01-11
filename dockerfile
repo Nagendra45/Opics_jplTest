@@ -1,5 +1,5 @@
 FROM microsoft/windowsservercore
 
-RUN mkdir C:\tomcat
+RUN MKDIR C:\Els_Software
 
-COPY . \tomcat
+COPY D:\ELS_CONFIGURE\ELS_SOFTWARE \Els_Software
