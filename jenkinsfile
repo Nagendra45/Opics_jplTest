@@ -1,13 +1,6 @@
 node {
-    //def app
-    //stage('Clone repository') {
-      //  checkout scm
-    //}
-
+   
     stage('Build ELS Docker image') {
 	  bat 'docker build -t elsserver:v2 .'
     }
-	stage('Configuring the Docker image'){
-		bat 'docker exec elsserver:v2 cmd "D:\ELS_CONFIGURE\ELS_SOFTWARE\ELS_Setup.bat"'
-	}
 }
