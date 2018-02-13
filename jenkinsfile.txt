@@ -6,10 +6,7 @@ stage('JPL_test') {
 
   wishHello 'Nagendra'
   
-  //standardPipeline{
-    //  projectName = "Jpl_sharedLibrary_test"
-      
-  //}
-  evenorodd(currentBuild.getNumber())
+
+  call_perl()
   
 }
