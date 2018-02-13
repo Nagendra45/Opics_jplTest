@@ -8,10 +8,11 @@ pipeline{
 					wishHello 'Nagendra'
 					}
 			}
-		}
+		
 		stage('Calling perl'){
 			steps{
 				call_perl()
 				}
 			}
+		}
 }
