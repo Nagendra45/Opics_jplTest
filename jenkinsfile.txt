@@ -1,5 +1,6 @@
 @Library('Jpl_sharedLibrary_test')_
 pipeline{
+		agent any
 		stages{
 			stage('JPL_test') {
 				steps{
