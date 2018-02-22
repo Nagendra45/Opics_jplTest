@@ -9,10 +9,17 @@ pipeline{
 					}
 			}
 		
-		stage('Calling perl'){
-			steps{
+			stage('Calling perl'){
+				steps{
 				call_perl()
+					}
 				}
 			}
-		}
+			stage('Logging'){
+				steps{
+					log.info('Starting!!!')
+					log.warning(Nothing to do!)
+					}
+				}
+			}
 }
