@@ -16,13 +16,11 @@ pipeline{
 				}
 			}
 			stage('Logging'){
-				steps{
-					script{
-					
-						log.info 'Starting!!!'
+				steps {
+					script { 
+						log.info 'Starting'
 						log.warning 'Nothing to do!'
-					}
-					
+						}
 					}
 				}
 			}
