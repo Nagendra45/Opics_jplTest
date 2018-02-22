@@ -1,27 +1,12 @@
 @Library('Jpl_sharedLibrary_test')_
-pipeline{
-		agent any
-		stages{
-			stage('JPL_test') {
-				steps{
-					echo 'Hi Guys Welcome Jenkins Shared Library!!!'
-					wishHello 'Nagendra'
-					}
-			}
-		
-			stage('Calling perl'){
-				steps{
-				call_perl()
-					}
-				}
-			}
-			stage('Logging'){
-				steps {
-					script { 
-						log.info 'Starting'
-						log.warning 'Nothing to do!'
-						}
-					}
-				}
-			}
+pipeline {
+    agent none
+    stage ('Example') {
+        steps {
+             script { 
+                 log.info 'Starting'
+                 log.warning 'Nothing to do!'
+             }
+        }
+    }
 }
